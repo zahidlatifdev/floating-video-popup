@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floating Video Popup</title>
+  <!--====== IcoFont css ======-->
+  <link rel="stylesheet" href="assets/css/icofont.min.css" />
+  <link rel="stylesheet" href="assets/css/popup.css" />
+</head>
+
+<body>
+  <!-- ========== Video modal start ========== -->
+  <div id="popup_wrapper" class="popup_wrapper popup_toggler">
+    <!--Use (popup-left) class rtl-->
+    <video id="popup_video">
+      <source id="playVideo" type="video/mp4" src="assets/video/welcome.mp4#t=0.5" />
+      <!--Video default open button click -->
+    </video>
+    <h4 id="popup_text" class="popup_text">Hey 👋</h4>
+    <div class="popup_close">
+      <i class="icofont-close-circled"></i>
+    </div>
+    <div id="popup_full-btn">
+      <div class="popup_full-close">
+        <i class="icofont-close-line"></i>
+      </div>
+      <div id="popup_full-play" class="popup_full-play">
+        <i class="icofont-play"></i>
+      </div>
+      <div class="popup_media-action">
+        <div id="popup_full-replay" class="popup_full-replay">
+          <i class="icofont-refresh"></i>
+        </div>
+        <div id="popup_full-volume" class="popup_full-volume">
+          <i class="icofont-volume-up"></i>
+        </div>
+        <div id="popup_full-mute" class="popup_full-mute">
+          <i class="icofont-ui-mute"></i>
+        </div>
+        <div id="popup_full-expand" class="popup_full-expand">
+          <i class="icofont-expand"></i>
+        </div>
+      </div>
+      <div class="popup_change-video">
+        <div class="popup_video"> <!--Video on firest button click -->
+          <a href="#">Contact Us</a>
+        </div>
+        <div onclick="videoChange('assets/video/example1.mp4')" id="video2" class="popup_video">
+          <!--Video on firest button click -->
+          <a href="#">Make a booking</a>
+        </div>
+        <div onclick="videoChange('assets/video/example2.mp4')" id="video3" class="popup_video">
+          <!--Video second firest button click -->
+          <a href="#">Schedule a call</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== Video modal end ========== -->
+  <!--====== Video modal js ======-->
+  <script src="assets/js/video-modal.js"></script>
+</body>
+
+</html>
